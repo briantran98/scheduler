@@ -13,7 +13,6 @@ export function useVisualMode (initial) {
 	}
 
 	function back() {
-		console.log(history);
 		if (history.length > 1) {
 			setHistory(prev => {
 				const newHistory = prev.filter(historyMode => historyMode !== mode)

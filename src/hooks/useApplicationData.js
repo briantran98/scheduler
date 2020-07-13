@@ -1,4 +1,4 @@
-import { useState, useEffect, useReducer } from 'react'
+import { useEffect, useReducer } from 'react'
 import axios from 'axios';
 
 const SET_DAY = "SET_DAY";
@@ -74,8 +74,6 @@ const useApplicationData = () => {
       axios.get("http://localhost:8001/api/appointments"),
       axios.get("http://localhost:8001/api/interviewers"),
     ]).then((all) => {
-      // console.log(all[0].data.map(e => e.name === state.day ? {...e, spots: e.spots - 1} : {...e}));
-      all[0].data.filter(e => e.name === state.day);
       dispatch({type: SET_APPLICATION_DATA, value: all});
     });
   }, []);

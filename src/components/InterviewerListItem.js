@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import "components/InterviewerListItem.scss";
 
 
-export default props => {
+const InterviewerListItem = props => {
     const {name, avatar, selected, setInterviewer } = props;
     const interviewClass = classNames('interviewers__item', {
         'interviewers__item--selected': selected
@@ -19,3 +19,5 @@ export default props => {
         </li>
     );
 }
+
+export default InterviewerListItem;

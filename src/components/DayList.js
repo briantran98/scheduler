@@ -1,8 +1,7 @@
 import React from 'react';
 import DayListItem from './DayListItem'
 
-
-export default props => {
+const DayList = props => {
     const dayListItem = props.days.map((day) => {
         return (
         <DayListItem
@@ -16,3 +15,5 @@ export default props => {
         <ul>{dayListItem}</ul>
     );
 }
+
+export default DayList;

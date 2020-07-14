@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default props => {
+const Status = props => {
 	return(
 		<main className="appointment__card appointment__card--status">
 		  <img
@@ -12,3 +12,5 @@ export default props => {
 		</main>
 	)
 }
+
+export default Status;

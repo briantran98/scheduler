@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import "components/DayListItem.scss";
 
-export default props => {
+const DayListItem = props => {
     const {name, spots, setDay, selected} = props;
     const dayClass = classNames('day-list__item', {
         'day-list__item--selected': selected,
@@ -22,3 +22,5 @@ const formatSpots = (spots) => {
     const message = spots > 1 ?  `${spots} spots remaining` : spots === 0 ? 'no spots remaining' : `${spots} spot remaining`;
     return message;
 }
+
+export default DayListItem;

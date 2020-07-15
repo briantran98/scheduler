@@ -42,13 +42,13 @@ npm run cypress
 # Screen Shots
 
 **Main landing page**
-!["Main screeen showing all of the interviews"]()
+!["Main screeen showing all of the interviews"](https://raw.githubusercontent.com/briantran98/scheduler/master/docs/screenshots/Landing-page.png)
 
 **Mouse hover effect on an interview**
-!["Appointment card showing the edit and delete button with a mouse hover"]()
+!["Appointment card showing the edit and delete button with a mouse hover"](https://raw.githubusercontent.com/briantran98/scheduler/master/docs/screenshots/Hover.png)
 
 **Edit/Submit form to create/update interview**
-!["Form to create or update an interview"]()
+!["Form to create or update an interview"](https://raw.githubusercontent.com/briantran98/scheduler/master/docs/screenshots/Form.png)
 
 **Confirmation screen after hitting the trash can icon**
-!["Confirmation screen to safeguard against destructive ability"]()
+!["Confirmation screen to safeguard against destructive ability"](https://raw.githubusercontent.com/briantran98/scheduler/master/docs/screenshots/Confirmation.png)

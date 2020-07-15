@@ -1,6 +1,6 @@
 import React from "react";
 
-export default ({onAdd}) => {
+export default ({ onAdd }) => {
   return (
     <main className="appointment__add">
       <img

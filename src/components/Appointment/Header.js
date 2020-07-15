@@ -1,6 +1,6 @@
 import React from "react";
 
-export default ({time}) => {
+export default ({ time }) => {
   return (
     <header className="appointment__time">
       <h4 className="text--semi-bold">{time}</h4>

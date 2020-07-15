@@ -66,6 +66,6 @@ const Application = (props) => {
       </section>
     </main>
   );
-}
+};
 
 export default Application;

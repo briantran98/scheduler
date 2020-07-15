@@ -10,8 +10,8 @@ axios.defaults.baseURL = "http://localhost:8001";
 
 const reducer = (state, action) => {
   switch (action.type) {
-    case SET_DAY:
-      return {...state, day: action.value}
+    // case SET_DAY:
+    //   return {...state, day: action.value}
     case SET_APPOINTMENT:
       return {...state, appointments: action.value}
     case SET_APPLICATION_DATA:

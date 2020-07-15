@@ -6,8 +6,6 @@
     @include button-inactive--opacity;
 
     margin-right: 0.5rem;
-    
-    
 
     &-image {
       border-radius: 16px;
@@ -39,13 +37,13 @@
 }
 
 .interviewers {
-    &__header {
-      color: $white;
-      margin-bottom: 0.5rem;
-    }
-  
-    &__list {
-      display: flex;
-      flex-flow: row wrap;
-    }
+  &__header {
+    color: $white;
+    margin-bottom: 0.5rem;
   }
+
+  &__list {
+    display: flex;
+    flex-flow: row wrap;
+  }
+}

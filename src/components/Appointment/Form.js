@@ -3,6 +3,7 @@ import InterviewerList from "../InterviewerList";
 import Button from "../Button";
 
 export default function Form(props) {
+  const {interviewers, onCancel, onSave } = props;
   const [name, setName] = useState(props.name || "");
   const [interviewer, setInterviewer] = useState(props.interviewer || null);
   const [error, setError] = useState("");
@@ -13,7 +14,7 @@ export default function Form(props) {
   };
 
   const cancel = () => {
-    props.onCancel(reset());
+    onCancel(reset());
   };
   const validate = () => {
     if (name === "") {
@@ -21,7 +22,7 @@ export default function Form(props) {
       return;
     }
     setError("");
-    props.onSave(name, interviewer);
+    onSave(name, interviewer);
   };
 
   return (
@@ -39,7 +40,7 @@ export default function Form(props) {
         </form>
         <section className="appointment__validation">{error}</section>
         <InterviewerList
-          interviewers={props.interviewers}
+          interviewers={interviewers}
           value={interviewer}
           onChange={(e) => setInterviewer(e)}
         />
@@ -57,12 +58,3 @@ export default function Form(props) {
     </main>
   );
 }
-
-// Form takes
-/*
-name:String
-interviewers:Array
-interviewer:Number
-onSave:Function
-onCancel:Function
-*/

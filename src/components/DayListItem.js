@@ -17,6 +17,7 @@ const DayListItem = (props) => {
   );
 };
 
+// Takes in number as param and formats for plural depending on the number
 const formatSpots = (spots) => {
   const message =
     spots > 1

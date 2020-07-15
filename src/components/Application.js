@@ -10,7 +10,8 @@ import {
 } from "helpers/selectors";
 import useApplicationData from "hooks/useApplicationData";
 
-export default function Application(props) {
+const Application = (props) => {
+  // Load in state and application data
   const {
     state,
     setDay,
@@ -22,6 +23,7 @@ export default function Application(props) {
 
   const interviewers = getInterviewersForDay(state, state.day);
 
+  // Build out the schedule with all the appointments
   const schedule = appointments.map((appointment) => {
     const interview = getInterview(state, appointment.interview);
     return (
@@ -65,3 +67,5 @@ export default function Application(props) {
     </main>
   );
 }
+
+export default Application;

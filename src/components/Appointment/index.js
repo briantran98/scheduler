@@ -30,6 +30,7 @@ export default (props) => {
   } = props;
   const { mode, transition, back } = useVisualMode(interview ? SHOW : EMPTY);
 
+  // Save button action to change add an appointment to state, post to database, and change visual mode
   const save = (name, interviewer) => {
     const interview = {
       student: name,
@@ -41,6 +42,7 @@ export default (props) => {
       .catch(() => transition(ERROR_SAVE, true));
   };
 
+  // Cancel button action to delete an appointment from state, delete from database, and change visual mode
   const cancel = () => {
     transition(DELETING, true);
     cancelInterview(id)

@@ -4,14 +4,15 @@ import "components/InterviewerList.scss";
 import PropTypes from "prop-types";
 
 const InterviewerList = (props) => {
-  const interviewerListItem = props.interviewers.map((interviewer) => {
+  const {interviewers, value, onChange} = props;
+  const interviewerListItem = interviewers.map(({id, name, avatar}) => {
     return (
       <InterviewerListItem
-        key={interviewer.id}
-        name={interviewer.name}
-        avatar={interviewer.avatar}
-        selected={interviewer.id === props.value}
-        setInterviewer={(event) => props.onChange(interviewer.id)}
+        key={id}
+        name={name}
+        avatar={avatar}
+        selected={id === value}
+        setInterviewer={(e) => onChange(id)}
       />
     );
   });
@@ -23,6 +24,7 @@ const InterviewerList = (props) => {
   );
 };
 
+// Type check props
 InterviewerList.propTypes = {
   value: PropTypes.number,
   onChange: PropTypes.func.isRequired,

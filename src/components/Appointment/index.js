@@ -41,12 +41,12 @@ export default props => {
         transition(DELETING, true)
         cancelInterview(id)
         .then(() => transition(EMPTY))
-        .catch(() => transition(ERROR_DELETE));
+        .catch(() => transition(ERROR_DELETE, true));
     }
 
 
     return (
-        <article className='appointment'>
+        <article data-testid="appointment" className='appointment'>
             <Header time={time}/>
             {mode === EMPTY && <Empty onAdd={e => transition(CREATE)}/>}
             {mode === SHOW && (

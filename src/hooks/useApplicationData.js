@@ -41,8 +41,8 @@ const useApplicationData = () => {
   const createAppointmentsElement = (id, interview) => {
     const appointment = {
       ...state.appointments[id],
-      interview: { ...interview || null }
-    };
+      interview: interview ? { ...interview } : null
+    }; 
     const appointments = {
       ...state.appointments,
       [id]: appointment
@@ -51,12 +51,14 @@ const useApplicationData = () => {
   }
 
 	const bookInterview = (id, interview) => {
-    const newSpots = state.days.map(e => e.name === state.day ? {...e, spots: e.spots - 1} : {...e});
     const appointments = createAppointmentsElement(id, interview)
     return axios.put(`http://localhost:8001/api/appointments/${id}`, appointments[id])
     .then(() => {
       setAppointments(appointments)
-      setSpots(newSpots)
+      if (!state.appointments[id].interview ) { 
+        const newSpots = state.days.map(e => e.name === state.day ? {...e, spots: e.spots - 1} : {...e});
+        setSpots(newSpots)
+      }
     })
 	}
 	
